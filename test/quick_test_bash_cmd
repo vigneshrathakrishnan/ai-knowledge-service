@@ -1,0 +1,12 @@
+# 1. Check status
+curl http://localhost:8000/db-status
+
+# 2. Train with sample data
+curl -X POST "http://localhost:8000/train" \
+-H "Content-Type: application/json" \
+-d '{"url": "https://en.wikipedia.org/wiki/Machine_learning"}'
+
+# 3. Query
+curl -X POST "http://localhost:8000/query" \
+-H "Content-Type: application/json" \
+-d '{"question": "What is machine learning?"}'

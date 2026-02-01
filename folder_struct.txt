@@ -1,0 +1,24 @@
+mango-rag-chatbot/
+├── app/
+│   ├── main.py                ← FastAPI server
+│   ├── rag_chain.py           ← LangChain pipeline
+│   ├── db.py                  ← Chroma DB setup
+│   └── utils.py               ← PDF/docx loaders & helpers
+├── ui/
+│   └── streamlit_app.py       ← Streamlit frontend
+├── data/                      ← Folder to drop PDFs/DOCX
+├── .env                       ← API keys and secrets
+├── requirements.txt
+└── README.md
+
+#Bash Command
+
+mkdir app ui data
+touch .env requirements.txt README.md
+cd app/
+touch main.py rag_chain.py db.py utils.py
+cd ..
+cd ui
+touch streamlit_app.py
+
+
